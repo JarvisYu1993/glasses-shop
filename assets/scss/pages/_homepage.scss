@@ -1,0 +1,547 @@
+// banner
+.banner {
+  height: 840px;
+  background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/banner.png?raw=true)
+    center center / cover;
+  .container {
+    height: 100%;
+  }
+}
+.banner-text {
+  text-align: right;
+  color: $secondary;
+}
+@include tablet{
+  .banner-text {
+    .h1 {
+      font-size: 48px;
+    }
+    .h3 {
+      font-size: 20px;
+    }
+  }
+}
+@include mobile {
+  .banner {
+    height: 394px;
+  }
+  .banner-text {
+    .h1 {
+      font-size: 32px;
+    }
+    .h3 {
+      font-size: 16px;
+    }
+  }
+}
+
+// service-section
+.service-padding {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+.service-title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 60px;
+  color: $secondary;
+}
+@include tablet{
+  .service-padding {
+    padding: 40px 0px;
+  }
+  .service-title {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+}
+@include mobile {
+  .service-padding {
+    padding: 32px 0px;
+  }
+  .service-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+.bg-pink {
+  background-color: $pink;
+  .h5 {
+    color: $secondary;
+    margin-bottom: 4px;
+  }
+}
+.service-list {
+  align-items: baseline;
+  &-item {
+    text-align: center;
+    width: 208px;
+    &:nth-child(n+2) {
+      margin-left: 76px;
+    }
+    &:last-child img {
+      margin: 30px 0;
+    }
+    img {
+      margin-bottom: 40px;
+    }
+    p {
+      text-align: left;
+    }
+  }
+}
+@include tablet{
+  .service-list {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 597px;
+    margin: auto;
+    &-item {
+      width: 237px;
+      margin-bottom: 40px;
+      &:nth-child(n+2) {
+        margin-left: 0px;
+      }
+      &:nth-child(n+3) {
+        margin-bottom: 0px;
+      }
+      &:last-child img {
+        margin: 12px 0;
+      }
+      img {
+        margin-bottom: 16px;
+        width: 80px;
+      }
+      .h5 {
+        font-size: 20px;
+      }
+    }
+  } 
+}
+@include mobile{  
+  .service-list {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    &-item {
+      &:nth-child(3) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+// classic
+.classic-padding {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+.classic-title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 60px;
+  color: $secondary;
+}
+@include tablet {
+  .classic-padding {
+    padding: 40px 0px;
+  }
+  .classic-title {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+}
+@include mobile{  
+  .classic-padding {
+    padding: 32px 0px;
+  }
+  .classic-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+.classic-list {
+  &-item:nth-child(n+2) {
+    margin-top: 32px;
+  }
+  &-item:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+  .item-img {
+    width: 635px;
+  }
+  .item-title {
+
+    font-weight: 900;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 30px;
+    color: $primary;
+  }
+  .item-icon {
+    margin-right: 8px;
+    height: 48px;
+    width: 48px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .diamond {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week3/icon-diamond.svg);
+  }
+  .sun {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week3/icon-sun.svg);
+  }
+  .thunder {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week3/icon-thunder.svg);
+  }
+}
+@include tablet{
+  .classic-list {
+    &-item:nth-child(n+2) {
+      margin-top: 8px;
+    }
+    &-item:nth-child(2) {
+      flex-direction: row;
+    }
+    .item-img {
+      width: 390px;
+    }
+    .item-title {
+      margin-left:30px;
+      .h2 {
+        font-size: 28px;
+      }
+    }
+    .item-icon {
+      height: 32px;
+      width: 32px;
+    }
+  }
+}
+@include mobile{  
+  .classic-list {
+    width: 100%;
+    &-item {
+      position: relative;
+    }
+    .item-img {
+      width: 100%;
+    }
+    .item-title {
+      margin: 0px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .h2 {
+        font-size: 28px;
+        color: #fff;
+      }
+    }
+    .diamond {
+      background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week3/icon-diamond-white.svg);
+    }
+    .sun {
+      background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week3/icon-sun-white.svg);
+    }
+    .thunder {
+      background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week3/icon-thunder-white.svg);
+    }
+  }
+}
+
+ // design
+.design-padding {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+.design-title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 60px;
+  color: white;
+}
+@include tablet{
+  .design-padding {
+    padding: 40px 0px;
+  }
+  .design-title {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+}
+@include mobile{  
+  .design-padding {
+    padding: 32px 0px;
+  }
+  .design-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+.bg-cover {
+  background: url(https://hexschool.github.io/webLayoutTraining1st/week3/bg.png) no-repeat  center;
+  background-size: cover;
+}
+.design-list {
+  .design-square {
+    width: 540px;
+    position: relative;
+    overflow:hidden;
+    &:first-child {
+      margin-right: 30px;
+    }
+  } 
+  .overlay{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    opacity: 0.5;
+    -webkit-transition: opacity 0.4s linear;
+    -moz-transition: opacity 0.4s linear;
+    -o-transition: opacity 0.4s linear;
+    transition: opacity 0.4s linear;
+    &:hover{
+      opacity: 0;
+    }  
+  }   
+  .square-title {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    color: $primary;
+    font-size: 72px;
+    font-family: 'Roboto', sans-serif;
+  }
+} 
+
+@include tablet{
+  .design-list {
+    .design-square{
+      width: 330px;
+    }
+    .square-title {
+      font-size: 32px;
+      top:45%;
+      left:30%;
+    }
+  }
+}
+@include mobile{  
+  .design-list {
+    flex-direction: column;
+    .design-square {
+      width: 100%;
+      &:first-child {
+        margin-bottom: 16px;
+      }
+    }
+    .square-img {
+      width: 100%;
+    }
+    .square-title{
+      font-size: 48px;
+    }  
+  }
+}
+// card
+.card-padding {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+.card-title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 60px;
+  color: $secondary;
+}
+@include tablet{
+  .card-padding {
+    padding: 40px 0px;
+  }
+  .card-title {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+}
+@include mobile{  
+  .card-padding {
+    padding: 32px 0px;
+  }
+  .card-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+  .card-group{
+    .card{
+      width: 255px;
+    }
+    .card-img {
+      width: 100%;
+    }
+    .card-body {
+      padding: 16px;
+      border: 1px solid #DEE2E6;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      transition: .5s;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-name {
+      font-weight: 500;
+    }
+    .card-text {
+      font-size: 16px;
+      margin: 7px 0 10px;
+    }
+    .card-time {
+      color: #707070;
+    }
+}
+@include tablet{
+  .card-group {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .card {
+      width:47.5%;
+      &:nth-child(n+3) {
+        margin-top: 28px;
+      }
+      &:nth-child(odd) {
+        margin-right: auto;
+      }
+    }
+    .card-text {
+      margin: 16px 0;
+    }
+  }
+}
+@include mobile{  
+  .card-group {
+    flex-direction: column;
+    .card {
+      width:100%;
+      &:nth-child(n+2) {
+        margin-top: 16px;
+      }
+      &:nth-child(odd) {
+        margin-right: auto;
+      }
+    }
+    .card-text {
+      margin: 16px 0;
+    }
+  }
+}
+
+// contact
+
+.form-padding {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+.form-title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 60px;
+}
+@include tablet{
+  .form-padding {
+    padding: 40px 0px;
+  }
+  .form-title {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+}
+@include mobile{  
+  .form-padding {
+    padding: 32px 0px;
+  }
+  .form-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+.contact {
+  .section-title {
+    color: #000;
+    margin-bottom: 24px;
+  }
+}
+.form {
+  max-width: 730px;
+  margin: 0 auto;
+  .h6 {
+    margin-bottom: 20px;
+  }
+}
+.input-group {
+  margin-bottom: 16px;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 16px;
+  border: 1px solid #000;
+  background: transparent;
+}
+.submit-btn {
+  width: 350px;
+  background-color: $primary;
+  padding: 16px 0;
+  text-align: center;
+  color: #fff;
+  border: none;
+  display: block;
+  margin: auto;
+  margin-top: 42px;
+  cursor: pointer;
+  &:hover {
+    background-color: $primary;
+    opacity: .5;
+  }
+}
+@include tablet{
+  .form {
+    width: 450px;
+    .h6 {
+      margin-bottom: 12px;
+    }
+  }
+  .input-group {
+    margin-bottom: 8px;
+  }
+  .submit-btn {
+    width: 210px;
+    padding: 8px 0;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 567px) {
+  .form {
+    max-width: 345px;
+    width: 100%;
+    .h6 {
+      margin-bottom: 8px;
+    }
+  }
+  .submit-btn {
+    width: 165px;
+    margin-top: 24px;
+  }
+}
+
+
+
+
+

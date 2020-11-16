@@ -1,0 +1,47 @@
+.common{
+	padding: 80px 0 264px;
+	&-title {
+		margin-bottom: 36px;
+	}
+	&-item {
+		margin-bottom: 40px;
+	}
+	&-question {
+		margin-bottom: 16px;
+	}
+	&-ans {
+		margin-left: 95px;
+	}
+}
+@include tablet {
+	.common {
+		padding: 40px 0 64px;
+		&-title{
+			font-weight: 500;
+		}
+		&-ans {
+			margin-left: 59px;
+		}
+	}
+}
+@include mobile {
+	.common {
+		padding: 24px 0px 36px;
+		width: 100%;
+		&-title {
+			font-size: 20px;
+			margin-bottom: 12px;
+		}
+		&-item {
+			margin-bottom: 20px;
+		}
+		&-question {
+			font-size: 16px;
+			margin-bottom: 8px;
+		}
+		&-ans {
+			font-size: 14px;
+			margin-left: 0px;
+		}
+	}
+}
